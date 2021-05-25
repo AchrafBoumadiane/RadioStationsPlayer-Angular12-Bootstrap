@@ -1,0 +1,88 @@
+<div class="wrapper">
+  <div class="player__container">
+    <div class="player__body">
+      <div class="body__cover">
+        <ul class="list list--cover">
+          <li>
+            <a class="list__link" href=""><i class="fa fa-navicon"></i></a>
+          </li>
+
+          <li>
+            <a class="list__link" href=""></a>
+          </li>
+
+          <li>
+            <a class="list__link" href=""><i class="fa fa-search"></i></a>
+          </li>
+        </ul>
+
+        <img src="../assets/Images/Picture.jpg" alt="Album cover" />
+
+        <!--<div class="range"></div>-->
+      </div>
+      <br>
+      <!--
+      <div class="body__info">
+        <div class="info__album">Station 1</div>
+
+        <div class="info__song">Description</div>
+      </div>
+      -->
+      <div class="list-group" *ngFor="let file of files" >
+        <a href="#" class="list-group-item list-group-item-action list-group-item-primary"
+                    (click)="onpenSong(file.url)"
+        >
+          {{ file.name }}
+        </a>
+      </div>
+      <!--
+      <div class="body__info">
+        <div class="info__song">Volume</div>
+
+        <div class="info__song"><input type="range" min="0" max="1" step="0.01" id="volume"></div>
+      </div>
+      -->
+      <br>
+      <div class="form-group alert alert-dark text-center"  role="alert">
+        <div class="info__song">Volume</div>
+        <input type="range" class="form-control-range with-range" id="formControlRange" type="range" min="0" max="1" step="0.01" (input)="setVolume($event)">
+      </div>
+
+      <!--
+      <div class="body__buttons">
+        <ul class="list list--buttons">
+          <li><button type="button" class="btn btn-secondary rounded-circle"><i-bs name="skip-start-fill" width="20" height="20"></i-bs></button></li>
+
+          <li><button type="button" class="btn btn-secondary rounded-circle"><i-bs name="play-fill" width="20" height="20"></i-bs></button></li>
+
+          <li><button type="button" class="btn btn-secondary rounded-circle"><i-bs name="pause-fill" width="20" height="20"></i-bs></button></li>
+
+          <li><button type="button" class="btn btn-secondary rounded-circle"><i-bs name="skip-end-fill" width="20" height="20"></i-bs></button></li>
+        </ul>
+      </div>
+      -->
+      <div class="container">
+        <a href="#" class="button" (click)="play()"><i-bs name="play-fill" width="15" height="15" ></i-bs></a> &nbsp;
+        <a href="#" class="button" (click)="pause()"><i-bs name="pause-fill" width="15" height="15"  ></i-bs></a> &nbsp;
+        <a href="#" class="button" (click)="stop()"><i-bs name="stop-fill" width="15" height="15" ></i-bs></a> &nbsp;
+      </div>
+    </div>
+
+    <!--
+    <div class="player__footer">
+      <ul class="list list--footer">
+        <li><a href="#" class="list__link"><i class="fa fa-heart-o"></i></a></li>
+
+        <li><a href="#" class="list__link"></a></li>
+
+        <li><a href="#" class="list__link"><i class="fa fa-undo"></i></a></li>
+
+        <li><a href="#" class="list__link"><i class="fa fa-ellipsis-h"></i></a></li>
+      </ul>
+    </div>
+    -->
+  </div>
+</div>
+
+
+
